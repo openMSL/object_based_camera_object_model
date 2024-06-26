@@ -34,24 +34,28 @@ The detection of moving objects, stationary objects, traffic signs and traffic l
 
 ### Input: Required Fields in OSI3::SensorView
 
-- `sensor_view.mounting_position`
-- `sensor_view.global_ground_truth.timestamp`
-- `sensor_view.global_ground_truth.host_vehicle_id`
-- `sensor_view.global_ground_truth.stationary_object.id`
-- `sensor_view.global_ground_truth.stationary_object.base.position`
-- `sensor_view.global_ground_truth.stationary_object.base.orientation`
-- `sensor_view.global_ground_truth.stationary_object.base.dimension`
+| OSI Message                                                      | Required / Optional |
+|------------------------------------------------------------------|---------------------|
+| `sensor_view.mounting_position`                                  | required            |
+| `sensor_view.global_ground_truth.timestamp`                      | required            |
+| `sensor_view.global_ground_truth.host_vehicle_id`                | required            |
+| `sensor_view.global_ground_truth.moving_object.id`               | required            |
+| `sensor_view.global_ground_truth.moving_object.base.position`    | required            |
+| `sensor_view.global_ground_truth.moving_object.base.orientation` | required            |
+| `sensor_view.global_ground_truth.moving_object.base.dimension`   | required            |
 
 ### Output: Fields in OSI3::SensorData Filled by the Sensor Model
 
-- `sensor_data.timestamp`
-- `sensor_data.moving_object.header.ground_truth_id`
-- `sensor_data.moving_object.header.tracking_id`
-- `sensor_data.moving_object.header.existence_probability`
-- `sensor_data.moving_object.header.measurement_state`
-- `sensor_data.moving_object.header.sensor_id`
-- `sensor_data.moving_object.base.position`
-- `sensor_data.moving_object.base.dimension`
+| OSI Message                                              | Required / Optional |
+|----------------------------------------------------------|---------------------|
+| `sensor_data.timestamp`                                  | required            |
+| `sensor_data.moving_object.header.ground_truth_id`       | required            |
+| `sensor_data.moving_object.header.tracking_id`           | required            |
+| `sensor_data.moving_object.header.existence_probability` | required            |
+| `sensor_data.moving_object.header.measurement_state`     | required            |
+| `sensor_data.moving_object.header.sensor_id`             | required            |
+| `sensor_data.moving_object.base.position`                | required            |
+| `sensor_data.moving_object.base.dimension`               | required            |
 
 ## Build Instructions
 
